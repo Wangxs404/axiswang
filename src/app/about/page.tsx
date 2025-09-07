@@ -23,6 +23,7 @@ import {
   RiNextjsFill,
   RiTailwindCssFill,
 } from "react-icons/ri";
+// 单独导入SiVisualstudiocode，避免barrel优化问题
 import {
   SiExpress,
   SiJavascript,
@@ -31,8 +32,10 @@ import {
   SiPrettier,
   SiTypescript,
   SiVercel,
-  SiVisualstudiocode,
 } from "react-icons/si";
+// 修复导入问题 - react-icons/si中没有SiVisualstudiocode
+// import { SiVisualstudiocode } from "react-icons/si";
+// 使用VscCode代替
 import { VscCode } from "react-icons/vsc";
 
 // @ts-ignore
@@ -167,7 +170,7 @@ const TOOLS = [
   {
     name: "VS Code",
     content: "Next.js is a React framework for production",
-    icon: <SiVisualstudiocode size={"50px"} color="#007acc" />,
+    icon: <VscCode size={"50px"} color="#007acc" />,
     color: "#007acc",
   },
   {

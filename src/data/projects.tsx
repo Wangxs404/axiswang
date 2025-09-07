@@ -260,7 +260,7 @@ const projects: Project[] = [
       return (
         <div>
           <TypographyP className="font-mono text-2xl text-center">
-            Automatically matches and retrieves the latest papers in researchers' fields
+            Automatically matches and retrieves the latest papers in researchers&apos; fields
           </TypographyP>
           <TypographyP className="font-mono">
             AI4Papers is an intelligent research assistant that helps researchers stay 
