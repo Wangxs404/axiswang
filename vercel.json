@@ -3,5 +3,5 @@
   "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
   "framework": "nextjs",
-  "crons": {}
+  "crons": []
 }
