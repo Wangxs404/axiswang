@@ -37,7 +37,7 @@ const config = {
     linkedin: "https://www.linkedin.com/in/axis-wang-35708127a/",
     instagram: "https://www.instagram.com/axiswang",
     facebook: "https://www.facebook.com/profile.php?id=100067192795747",
-    github: "https://github.com/axiswang",
+    github: "https://github.com/wangxs404",
   },
 };
 export { config };
