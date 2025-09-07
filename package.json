@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "axiswang-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -37,7 +37,6 @@
     "react-icons": "^5.2.1",
     "resend": "^4.2.0",
     "sass": "^1.77.8",
-    "socket.io-client": "^4.7.5",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.167.1",

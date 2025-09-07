@@ -1,22 +1,23 @@
-# 🚀 My Portfolio Website
+# 🚀 Axis Wang's Portfolio Website
 
-Welcome to the repository for my personal portfolio website! This is where I showcase my skills, projects, and a bit of my personality through jaw-dropping 3D animations, slick interactions, and fluid motion. If you're into creative web design, you're in the right place.
-
-![Portfolio Preview](https://github.com/Naresh-Khatri/Portfolio/blob/main/public/assets/projects-screenshots/portfolio/landing.png?raw=true)
+Welcome to the repository for Axis Wang's personal portfolio website! This showcases AI applications, full-stack development projects, and SaaS products through modern web technologies and interactive design.
 
 ## 🔥 Features
 
-- **3D Animations**: Custom-made interactive keyboard using Spline with skills as keycaps that reveal titles and descriptions on hover.
-- **Slick Interactions**: Powered by GSAP and Framer Motion for smooth animations on scroll, hover, and element reveal.
-- **Space Theme**: Particles on a dark background to simulate a cosmic environment, making the experience out of this world.
-- **Responsive Design**: Fully responsive across all devices to ensure the best user experience.
-- **Innovative Web Design**: Combining creativity with functionality to push the boundaries of modern web design.
+- **Modern 3D Interactions**: Custom-made interactive elements using Spline with skills as interactive components.
+- **Smooth Animations**: Powered by GSAP and Framer Motion for fluid transitions and scroll-based animations.
+- **Professional Design**: Clean, modern interface optimized for showcasing technical projects.
+- **Responsive Design**: Fully responsive across all devices for optimal user experience.
+- **AI-Focused Portfolio**: Highlighting AI applications, automation tools, and SaaS products.
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Next.js, React, Tailwind CSS, Shadcn, Aceternity UI
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Node.js, Express, Python
+- **Database**: PostgreSQL, Supabase
+- **AI/ML**: PyTorch, CUDA
 - **Animations**: GSAP, Framer Motion, Spline Runtime
-- **Misc**: Resend, Socketio, Zod
+- **Deployment**: Vercel
 
 ## 🚀 Getting Started
 
@@ -30,13 +31,13 @@ Welcome to the repository for my personal portfolio website! This is where I sho
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Naresh-Khatri/Portfolio.git
+    git clone https://github.com/axiswang/portfolio.git
     ```
 
 2. Navigate to the project directory:
 
     ```bash
-    cd Portfolio
+    cd portfolio
     ```
 
 3. Install dependencies:
@@ -55,19 +56,23 @@ Welcome to the repository for my personal portfolio website! This is where I sho
     yarn dev
     ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the magic!
+5. Open [http://localhost:3000](http://localhost:3000) in your browser!
+
+## 🚀 Featured Projects
+
+- **AI4Papers**: Intelligent research paper matching system
+- **Video2PPT**: AI-powered video to presentation converter
+- **SupaSubmit**: Form automation AI agent
+- **XiaoZiShu**: Academic research assistant
+- **Fabu**: SaaS launch platform
 
 ## 🚀 Deployment
 
-This site is deployed on Vercel. For your own deployment, follow these steps:
+This site is deployed on Vercel. For deployment:
 
-1. Push your code to a GitHub repository.
-2. Connect your repository to Vercel.
-3. Vercel will handle the deployment process.
-
-## 🤝 Contributing
-
-If you'd like to contribute or suggest improvements, feel free to open an issue or submit a pull request. All contributions are welcome!
+1. Push code to GitHub repository
+2. Connect repository to Vercel
+3. Vercel handles automatic deployment
 
 ## 📄 License
 

@@ -12,7 +12,22 @@ import ContactForm from "../ContactForm";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { config } from "@/data/config";
+
 const ContactSection = () => {
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <section id="contact" className="min-h-screen max-w-7xl mx-auto flex items-center justify-center">
+        <div className="animate-pulse">Loading contact form...</div>
+      </section>
+    );
+  }
+
   return (
     <section id="contact" className="min-h-screen max-w-7xl mx-auto ">
       <Link href={"#contact"}>

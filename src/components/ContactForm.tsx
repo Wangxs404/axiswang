@@ -14,27 +14,58 @@ const ContactForm = () => {
   const [email, setEmail] = React.useState("");
   const [message, setMessage] = React.useState("");
   const [loading, setLoading] = React.useState(false);
+  const [mounted, setMounted] = React.useState(false);
 
   const { toast } = useToast();
   const router = useRouter();
+
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // 如果还没有挂载，显示加载状态
+  if (!mounted) {
+    return (
+      <div className="min-w-7xl mx-auto sm:mt-4 flex justify-center items-center h-64">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("/api/send", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          fullName,
           email,
+          subject: fullName ? `Message from ${fullName}` : "Contact from portfolio",
           message,
         }),
       });
-      const data = await res.json();
+
+      const rawText = await res.text();
+      let payload: any = null;
+      try {
+        payload = rawText ? JSON.parse(rawText) : null;
+      } catch (_) {
+        // ignore json parse error, keep raw text
+      }
+
+      if (!res.ok) {
+        const serverMsg =
+          (payload && (payload.error || payload.message)) ||
+          `HTTP error! status: ${res.status}`;
+        throw new Error(typeof serverMsg === "string" ? serverMsg : JSON.stringify(serverMsg));
+      }
+
+      const data = payload ?? {};
       if (data.error) throw new Error(data.error);
+
       toast({
         title: "Thank you!",
         description: "I'll get back to you as soon as possible.",
@@ -45,21 +76,19 @@ const ContactForm = () => {
       setFullName("");
       setEmail("");
       setMessage("");
-      const timer = setTimeout(() => {
-        router.push("/");
-        clearTimeout(timer);
-      }, 1000);
-    } catch (err) {
+    } catch (err: any) {
+      console.error("Contact form error:", err);
+      const desc = typeof err?.message === "string" ? err.message : "Something went wrong! Please check the fields.";
       toast({
         title: "Error",
-        description: "Something went wrong! Please check the fields.",
+        description: desc,
         className: cn(
           "top-0 w-full flex justify-center fixed md:max-w-7xl md:top-4 md:right-4"
         ),
         variant: "destructive",
       });
+      setLoading(false);
     }
-    setLoading(false);
   };
   return (
     <form className="min-w-7xl mx-auto sm:mt-4" onSubmit={handleSubmit}>
@@ -141,7 +170,7 @@ const BottomGradient = () => {
   return (
     <>
       <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-brand to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent orange-400 to-transparent" />
+      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-orange-400 to-transparent" />
     </>
   );
 };
