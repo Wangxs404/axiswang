@@ -27,7 +27,7 @@ const config = {
   ],
   author: "Axis Wang",
   email: "wang-xs24@mails.tsinghua.edu.cn",
-  site: "https://axiswang.vercel.app",
+  site: "https://axiswang.me",
 
   get ogImg() {
     return this.site + "/assets/seo/og-image.png";
