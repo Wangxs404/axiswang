@@ -36,10 +36,14 @@ export default async function BlogPostPage({
   }
 
   const { content, frontmatter } = post;
-  const compiled = await compileMDX<{ title: string }>({
-    source: content,
-    options: { parseFrontmatter: false },
-  });
+
+  const isHtml = frontmatter.format === "html";
+  const compiled = isHtml
+    ? null
+    : await compileMDX<{ title: string }>({
+        source: content,
+        options: { parseFrontmatter: false },
+      });
 
   return (
     <div className="container mx-auto max-w-3xl px-6 py-16">
@@ -72,8 +76,12 @@ export default async function BlogPostPage({
         ) : null}
       </header>
 
-      <article className="prose prose-invert max-w-none">
-        {compiled.content}
+      <article className={isHtml ? "wechat-article" : "prose prose-invert max-w-none"}>
+        {isHtml ? (
+          <div dangerouslySetInnerHTML={{ __html: content }} />
+        ) : (
+          compiled?.content
+        )}
       </article>
     </div>
   );

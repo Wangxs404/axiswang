@@ -8,6 +8,12 @@ export type BlogFrontmatter = {
   date: string; // ISO or yyyy-mm-dd
   tags?: string[];
   sourceUrl?: string;
+  /**
+   * Content format for rendering.
+   * - mdx: compiled via MDX
+   * - html: rendered as raw HTML (dangerouslySetInnerHTML)
+   */
+  format?: "mdx" | "html";
 };
 
 export type BlogPost = {
