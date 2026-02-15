@@ -315,6 +315,88 @@ const projects: Project[] = [
     },
   },
   {
+    id: "copyslides",
+    category: "AI Productivity Tool",
+    title: "CopySlides",
+    src: "/assets/projects-screenshots/copyslides/landing.png",
+    screenshots: ["landing.png"],
+    live: "https://copyslides.com",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.shadcn,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.express,
+        PROJECT_SKILLS.postgres,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            CopySlides helps users quickly turn source materials into polished
+            presentation slides. It focuses on fast drafting, clear structure,
+            and practical templates so teams can go from idea to deck in minutes.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Highlights</TypographyH3>
+          <ul className="list-disc list-inside space-y-2 font-mono">
+            <li>Fast slide drafting from structured content</li>
+            <li>Template-based styling for consistent decks</li>
+            <li>Optimized for creator and team workflows</li>
+            <li>Simple export-oriented presentation pipeline</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
+    id: "zinote",
+    category: "AI Knowledge Workspace",
+    title: "ZiNote",
+    src: "/assets/projects-screenshots/zinote/landing.svg",
+    screenshots: ["landing.svg"],
+    live: "https://zinote.app",
+    skills: {
+      frontend: [
+        PROJECT_SKILLS.ts,
+        PROJECT_SKILLS.next,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.react,
+      ],
+      backend: [
+        PROJECT_SKILLS.python,
+        PROJECT_SKILLS.node,
+        PROJECT_SKILLS.postgres,
+        PROJECT_SKILLS.supabase,
+      ],
+    },
+    get content() {
+      return (
+        <div>
+          <TypographyP className="font-mono">
+            ZiNote is an AI-first note and knowledge workspace built for capturing,
+            organizing, and reusing ideas. It helps users turn fragmented notes
+            into actionable knowledge with better context and retrieval.
+          </TypographyP>
+          <ProjectsLinks live={this.live} repo={this.github} />
+          <TypographyH3 className="my-4 mt-8">Core Functions</TypographyH3>
+          <ul className="list-disc list-inside space-y-2 font-mono">
+            <li>AI-assisted note capture and summarization</li>
+            <li>Knowledge organization with searchable context</li>
+            <li>Cross-note linking for long-term memory building</li>
+            <li>Productivity-focused writing workflow</li>
+          </ul>
+        </div>
+      );
+    },
+  },
+  {
     id: "viewpair",
     category: "Video Tool",
     title: "View-Pair",
