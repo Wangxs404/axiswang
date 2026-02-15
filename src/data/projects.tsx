@@ -236,44 +236,6 @@ export type Project = {
 };
 const projects: Project[] = [
   {
-    id: "ai4papers",
-    category: "AI Research Tool",
-    title: "AI4Papers",
-    src: "/assets/projects-screenshots/ai4papers/landing.png",
-    screenshots: ["landing.png"],
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.shadcn,
-      ],
-      backend: [
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    live: "https://ai4papers.com",
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono text-2xl text-center">
-            Automatically matches and retrieves the latest papers in researchers&apos; fields
-          </TypographyP>
-          <TypographyP className="font-mono">
-            AI4Papers is an intelligent research assistant that helps researchers stay 
-            up-to-date with the latest publications in their field. Using advanced AI 
-            algorithms, it automatically matches your research interests with newly 
-            published papers, saving you hours of manual searching.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-        </div>
-      );
-    },
-  },
-  {
     id: "video2ppt",
     category: "Productivity Tool",
     title: "Video2PPT",
@@ -397,44 +359,6 @@ const projects: Project[] = [
     },
   },
   {
-    id: "viewpair",
-    category: "Video Tool",
-    title: "View-Pair",
-    src: "/assets/projects-screenshots/viewpair/landing.png",
-    screenshots: ["landing.png"],
-    live: "https://view-pair.fun",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.js,
-        PROJECT_SKILLS.react,
-        PROJECT_SKILLS.tailwind,
-      ],
-      backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono">
-            View-Pair is a split-screen application that allows you to watch two 
-            online videos simultaneously. Perfect for comparing content, learning 
-            from multiple sources, or multitasking with video content.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Use Cases</TypographyH3>
-          <ul className="list-disc list-inside space-y-2 font-mono">
-            <li>Compare different tutorial approaches</li>
-            <li>Watch multiple streams simultaneously</li>
-            <li>Cross-reference educational content</li>
-            <li>Efficient video content consumption</li>
-          </ul>
-        </div>
-      );
-    },
-  },
-  {
     id: "supasubmit",
     category: "AI Agent",
     title: "SupaSubmit",
@@ -469,46 +393,6 @@ const projects: Project[] = [
             <li>Automated data validation</li>
             <li>Batch processing capabilities</li>
             <li>Custom workflow automation</li>
-          </ul>
-        </div>
-      );
-    },
-  },
-  {
-    id: "xiaozishu",
-    category: "AI Research Assistant",
-    title: "XiaoZiShu",
-    src: "/assets/projects-screenshots/xiaozishu/landing.png",
-    screenshots: ["landing.png"],
-    live: "https://xiaozishu.org",
-    skills: {
-      frontend: [
-        PROJECT_SKILLS.ts,
-        PROJECT_SKILLS.next,
-        PROJECT_SKILLS.tailwind,
-        PROJECT_SKILLS.react,
-      ],
-      backend: [
-        PROJECT_SKILLS.python,
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.postgres,
-      ],
-    },
-    get content() {
-      return (
-        <div>
-          <TypographyP className="font-mono">
-            XiaoZiShu is an AI research agent designed to provide intelligent 
-            academic research assistance. It helps researchers with literature 
-            review, paper analysis, and research methodology guidance.
-          </TypographyP>
-          <ProjectsLinks live={this.live} repo={this.github} />
-          <TypographyH3 className="my-4 mt-8">Capabilities</TypographyH3>
-          <ul className="list-disc list-inside space-y-2 font-mono">
-            <li>Automated literature review</li>
-            <li>Research paper summarization</li>
-            <li>Citation analysis and management</li>
-            <li>Research methodology suggestions</li>
           </ul>
         </div>
       );
